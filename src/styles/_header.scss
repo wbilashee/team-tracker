@@ -1,0 +1,21 @@
+.header {
+  height: 14.5rem;
+  display: grid;
+  color: white;
+  place-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../assets/background.jpg") no-repeat center/cover;
+
+  @include breakpoint-up(medium) {
+    height: 21.25rem;
+    background-position: 100% 60%;
+  }
+
+  h1 {
+    font-size: 2.35rem;
+
+    @include breakpoint-up(medium) {
+      font-size: 2.85rem;
+    }
+  }
+}
