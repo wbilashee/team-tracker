@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Details from "./components/Details";
 import Teams from "./components/Teams";
 import Error from "./components/Error";
+import Loading from "./components/Loading";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const url = "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=English%20Premier%20League";
 
@@ -35,7 +36,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div>loading.....</div>;
+    return <Loading />;
   }
 
   return <RouterProvider router={router} />;
