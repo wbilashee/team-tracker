@@ -18,4 +18,12 @@
       font-size: 2.85rem;
     }
   }
+
+  img {
+    width: 8rem;
+
+    @include breakpoint-up(medium) {
+      width: 12rem;
+    }
+  }
 }

@@ -5,8 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Button, CardActionArea, CardActions, createTheme, ThemeProvider } from "@mui/material";
+import { Link } from "react-router-dom";
 
-export default function Team({ strTeamBadge, strTeam, strSport }) {
+export default function Team({ idTeam, strTeamBadge, strTeam, strSport }) {
     const theme = createTheme({
         typography: {
             fontFamily: [
@@ -43,9 +44,11 @@ export default function Team({ strTeamBadge, strTeam, strSport }) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button className="btn" variant="contained" endIcon={<ArrowForwardIcon />}>
-                    Explore
-                </Button>
+                <Link to={`/teams/${idTeam}`}>
+                    <Button className="btn" variant="contained" endIcon={<ArrowForwardIcon />}>
+                        Explore
+                    </Button>
+                </Link>
             </CardActions>
         </Card>
     )
