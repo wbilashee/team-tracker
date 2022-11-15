@@ -25,3 +25,22 @@ body {
 a {
   text-decoration: none;
 }
+
+.error {
+  width: auto;
+  display: grid;
+  margin: 2rem auto;
+  place-items: center;
+
+  @include breakpoint-up(medium) {
+    width: 45%;
+  }
+
+  img {
+    height: 20rem;
+
+    @include breakpoint-up(medium) {
+      height: 25rem;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Error from "./Error";
 import Header from "./Header";
 import { useParams } from "react-router-dom";
 import MaleIcon from "@mui/icons-material/Male";
@@ -12,7 +13,7 @@ import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 export default function Details({ teams }) {
     const { id } = useParams();
     const [team, setTeam] = useState(null);
-
+    
     useEffect(() => {
         const team = teams.filter(team => team.idTeam === id)[0];
         setTeam(team);
@@ -49,5 +50,7 @@ export default function Details({ teams }) {
                 </section>
             </main>
         )
+    } else {
+        return <Error />
     }
 }

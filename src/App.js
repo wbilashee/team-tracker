@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Details from "./components/Details";
 import Teams from "./components/Teams";
+import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const url = "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=English%20Premier%20League";
 
@@ -14,7 +15,10 @@ function App() {
       element: <Teams teams={teams} />,
     }, {
       path: "/teams/:id",
-      element: <Details teams={teams}/>,
+      element: <Details teams={teams} />,
+    }, {
+      path: "*",
+      element: <Error />
     },
   ]);
 
