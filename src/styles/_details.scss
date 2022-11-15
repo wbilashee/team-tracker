@@ -1,0 +1,87 @@
+.details {
+  padding: 2rem 0 4rem;
+  background: var(--navy);
+
+  .container {
+    width: 90%;
+    margin: auto;
+    color: white;
+
+    @include breakpoint-up(medium) {
+      width: 80%;
+    }
+  }
+
+  &-box {
+    display: grid;
+    align-items: center;
+    border-radius: 1rem;
+    background: var(--blue);
+    padding: 1rem 1rem 0.75rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @include breakpoint-up(medium) {
+      gap: 0rem;
+      padding: 1rem 1rem 0.8rem 2rem;
+      grid-template-columns: 1.35fr 1fr;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      display: flex;
+      font-weight: 500;
+      font-size: 1.25rem;
+      padding: 0.5rem 0;
+      align-items: center;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+
+  &-text {
+    margin: 2rem auto;
+
+    p {
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: white;
+      padding: 1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

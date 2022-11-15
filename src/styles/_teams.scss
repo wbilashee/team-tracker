@@ -1,6 +1,6 @@
 .teams {
   padding: 4rem 0 6rem;
-  background: #0e0a2a;
+  background: var(--navy);
 
   .container {
     width: 80%;
@@ -33,8 +33,8 @@
         color: white;
         font-weight: 500;
         border-radius: 0;
-        background: #3a42ff;
         padding: 0.625rem 1rem;
+        background: var(--blue);
         font-family: "Montserrat", sans-serif;
       }
     }
